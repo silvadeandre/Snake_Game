@@ -49,6 +49,12 @@ function iniciarJogo(){
    if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
    if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
 
+   for(i = 1; i < snake.length; i++){
+      if(snake[0].x == snake[i].x && snake[0]. y == snake[1].y){
+         clearInterval(jogo);
+         alert('Game Over');
+      }
+   }
 
    criarBG();
    criarCobrinha();
@@ -68,7 +74,7 @@ function iniciarJogo(){
    else{food.x = Math.floor(Math.random() * 15 + 1) * box;
       food.y = Math.floor(Math.random() * 15 + 1) * box;
    }
-   
+
    let newHead = {
       x:snakeX,
       y: snakeY
@@ -78,5 +84,5 @@ function iniciarJogo(){
 }
 /*a função if criou as coordenadas de aumentar ou diminuir os quadradinhos da cobrinha dependendo da direção escolhida*/
 
-let jogo = setInterval(iniciarJogo, 100); 
+let jogo = setInterval(iniciarJogo, 150); 
 /*atualizar o jogo em 100 milésimos de segundo*/
