@@ -52,7 +52,7 @@ function iniciarJogo(){
    for(i = 1; i < snake.length; i++){
       if(snake[0].x == snake[i].x && snake[0]. y == snake[1].y){
          clearInterval(jogo);
-         alert('Game Over');
+         alert("Oops, too hungry! You've eaten yourself... Game Over");
       }
    }
 
