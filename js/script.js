@@ -13,14 +13,14 @@ let food = {
    x: Math.floor(Math.random() * 15 + 1) * box,
    y: Math.floor(Math.random() * 15 + 1) * box
 }
-/*para indicar a direção que a cobrinha vai andar*/
-/*o math.random retornaum número aeatório até 1 e o math.floor retira a parte suplante*/
+/* para indicar a direção que a cobrinha vai andar */
+/* o math.random retorna um número aleatório até 1 e o math.floor retira a parte suplante */
 
 function criarBG() {
    context.fillStyle = "lightgreen";
    context.fillRect(0, 0, 16 * box, 16 * box); 
 }
-/* desenha o campo do jogoe trabalha com 4 parâmetros, x e y e altura e largura */ 
+/* desenha o campo do jogo e trabalha com 4 parâmetros, x, y, altura e largura */ 
 
 function criarCobrinha() {
    for(i=0; i < snake.length; i++){
@@ -82,7 +82,7 @@ function iniciarJogo(){
 
    snake.unshift(newHead);
 }
-/*a função if criou as coordenadas de aumentar ou diminuir os quadradinhos da cobrinha dependendo da direção escolhida*/
+/* a função if criou as coordenadas de aumentar ou diminuir os quadradinhos da cobrinha dependendo da direção escolhida */
 
 let jogo = setInterval(iniciarJogo, 150); 
-/*atualizar o jogo em 100 milésimos de segundo*/
+/* atualizar o jogo em 100 milésimos de segundo */
